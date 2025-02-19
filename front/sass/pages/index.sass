@@ -7,13 +7,14 @@ $color-orange: #FCC054
 $color-violet: #4E0154
 $color-black: #0C1222
 $color-white: #F0F0F0
+$color-name: #522D1D
 $oval-shadow-color: #07080D
 
 $dots-opacity: 0.5
 $btn-animation-speed: 1.2s
 $player-animation-speed: 4s
 body
-  background-color: #1f1168
+  background-color: #0b3b3a
   overscroll-behavior: none
   font-family: $font-roadRadio-black
   img
@@ -25,47 +26,21 @@ body
   height: 100%
 .land
   pointer-events: none
-  // background: url('../img/bg-1920.jpg') no-repeat 50% 50%/cover
-  background: radial-gradient(74.32% 100% at 50% 0%, #0D4241 0%, #0B2928 100%)
+  background: url('../img/bg-1920.jpg') no-repeat 50% 50%/cover
   width: 100%
   height: 100%
   -webkit-tap-highlight-color: transparent
   position: relative
   overflow: hidden
-  &::after
-    content: ''
-    position: absolute
-    left: 0
-    bottom: 0
-    // right: 0
-    // top: 0
-    width: 382px
-    height: 729px
-    // border: 1px dashed red
-    // background-image: url('')
-    background: url('../img/dots-left-desk.png') no-repeat 0 0/contain
-    opacity: 0.3
-  &::before
-    content: ''
-    position: absolute
-    // left: 0
-    // bottom: 0
-    right: 0
-    top: 0
-    width: 382px
-    height: 729px
-    // border: 1px dashed red
-    // background-image: url('')
-    background: url('../img/dots-right-desk.png') no-repeat 0 0/contain
-    opacity: 0.3
+  
   &__cricket
     position: absolute
     left: 800px
     top: 0
     bottom: 0
     width: 572px
-    // border: 1px dashed red
     background-image: url('../img/cricket-desk.svg')
+
   &__header
     display: flex
     justify-content: space-between
@@ -207,39 +182,61 @@ body
 
   &__players
     position: absolute
-    z-index: 10
-    bottom: -10px
-    right: -100px
-    max-height: calc(100% - 106px)
-    width: 1360px 
+    // z-index: 10
+    bottom: 53px
+    right: 73px
+    // max-height: calc(100% - 106px)
+    // width: 1360px 
+    // border: 1px dashed red
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 16px
+    width: 837px
+    height: 870px
+  &__player
+    // width: calc( 50% - 8px )
+    // height: calc( 50% - 8px )
+    width: 367px
+    height: 367px
+    // border: 1px dashed red
+    position: relative
+    // padding: 10px
+    &--1
+      background: url('../img/player-1-desk.png') no-repeat 0 50%/contain
+      animation: 4s infinite player-rotate-1 linear
+    &--2
+      background: url('../img/player-2-desk.png') no-repeat 0 50%/contain
+      animation: 7s infinite player-rotate-2 linear
+    &--3
+      background: url('../img/player-3-desk.png') no-repeat 0 50%/contain
+      animation: 5s infinite player-rotate-3 linear
+    &--4
+      background: url('../img/player-4-desk.png') no-repeat 0 50%/contain
+      animation: 5s infinite player-rotate-4 linear
 
-  // &::before
-  //   content: ''
-  //   display: block
-  //   width: 288px
-  //   height: 404px
-  //   left: -80px
-  //   bottom: 22px
-  //   position: absolute
-  //   background: url('../img/light-left.svg') no-repeat 0 0/contain
-  //   animation: 5s infinite rotate-line2 ease-in-out
-  //   z-index: 2
-  // &::after
-  //   content: ''
-  //   display: block
-  //   width: 288px
-  //   height: 404px
-  //   right: -124px
-  //   top: 170px
-  //   position: absolute
-  //   background: url('../img/light-right.svg') no-repeat 0 0/contain
-  //   animation: 6s infinite rotate-line ease-in-out
+
   &__footer
     display: none
   &__shadow
     display: none
 .pulse-btn
   animation: $btn-animation-speed infinite pulse-btn ease-in-out
+.player
+  position: relative
+  top: 10px
+
+  background: url('../img/player-1.png') no-repeat 0 50%/contain
+  &__name
+    position: absolute
+    bottom: 6px
+    left: 0
+    right: 0
+    text-align: center
+    font-family: $font-roadRadio-bold
+    color: $color-name
+    font-size: 31px
+    text-transform: uppercase
 
 @keyframes pulse-btn
   0%, 100%
@@ -247,27 +244,51 @@ body
   50%
     transform: scale(1.07)
 
-@keyframes rotate-line
+// @keyframes rotate-line
+//   0%, 100%
+//     transform: rotate(-10deg)
+//   50%
+//     transform: rotate(5deg)
+
+// @keyframes rotate-line2
+//   0%, 100%
+//     transform: rotate(0deg)
+//   50%
+//     transform: rotate(-25deg)
+
+// @keyframes rotate-line-tab-1
+//   0%, 100%
+//     transform: rotate(60deg)
+//   50%
+//     transform: rotate(40deg)
+  
+// @keyframes rotate-line-tab-2
+//   0%, 100%
+//     transform: rotate(-15deg)
+//   50%
+//     transform: rotate(0deg)
+  
+@keyframes player-rotate-1
   0%, 100%
-    transform: rotate(-10deg)
+    transform: rotate(-5deg)
+  50%
+    transform: rotate(0deg)
+  
+@keyframes player-rotate-2
+  0%, 100%
+    transform: rotate(0deg)
   50%
     transform: rotate(5deg)
-
-@keyframes rotate-line2
-  0%, 100%
-    transform: rotate(0deg)
-  50%
-    transform: rotate(-25deg)
-
-@keyframes rotate-line-tab-1
-  0%, 100%
-    transform: rotate(60deg)
-  50%
-    transform: rotate(40deg)
   
-@keyframes rotate-line-tab-2
+@keyframes player-rotate-3
   0%, 100%
-    transform: rotate(-15deg)
+    transform: rotate(-5deg)
   50%
-    transform: rotate(0deg)
+    transform: rotate(-10deg)
+  
+@keyframes player-rotate-4
+  0%, 100%
+    transform: rotate(5deg)
+  50%
+    transform: rotate(10deg)
   
