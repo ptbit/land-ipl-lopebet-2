@@ -1,0 +1,263 @@
+$font-roadRadio-regular: RoadRadio-Regular, sans-serif //400
+$font-roadRadio-bold: RoadRadio-Bold, sans-serif //700
+$font-roadRadio-black: RoadRadio-Black, sans-serif //900
+$font-roboto-condensed: RobotoCondensed-Bold, sans-serif //700
+
+$color-orange: #FCC054
+$color-violet: #4E0154
+$color-black: #0C1222
+$color-white: #F0F0F0
+$oval-shadow-color: #07080D
+
+$dots-opacity: 0.5
+$btn-animation-speed: 1.2s
+$player-animation-speed: 4s
+body
+  background-color: #1f1168
+  overscroll-behavior: none
+  font-family: $font-roadRadio-black
+  img
+    max-width: 100%
+    height: auto
+.main-link
+  position: fixed
+  width: 100%
+  height: 100%
+.land
+  pointer-events: none
+  // background: url('../img/bg-1920.jpg') no-repeat 50% 50%/cover
+  background: radial-gradient(74.32% 100% at 50% 0%, #0D4241 0%, #0B2928 100%)
+  width: 100%
+  height: 100%
+  -webkit-tap-highlight-color: transparent
+  position: relative
+  overflow: hidden
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    // right: 0
+    // top: 0
+    width: 382px
+    height: 729px
+    // border: 1px dashed red
+    // background-image: url('')
+    background: url('../img/dots-left-desk.png') no-repeat 0 0/contain
+    opacity: 0.3
+  &::before
+    content: ''
+    position: absolute
+    // left: 0
+    // bottom: 0
+    right: 0
+    top: 0
+    width: 382px
+    height: 729px
+    // border: 1px dashed red
+    // background-image: url('')
+    background: url('../img/dots-right-desk.png') no-repeat 0 0/contain
+    opacity: 0.3
+  &__header
+    display: flex
+    justify-content: space-between
+    height: 106px
+    max-width: 1920px
+    width: 100%
+    padding: 30px 40px 0
+    margin: 0 auto
+  &__buttons
+    display: flex
+    align-items: center
+    gap: 16px
+    font-family: $font-roboto-condensed
+    padding-block: 6px
+    font-size: 28px
+  &__button
+    border-radius: 4px
+    border: 2px solid #FCC054
+    text-align: center
+    font-size: invert
+    font-weight: 700
+    line-height: normal
+    text-transform: uppercase
+    padding-inline: 32px
+    display: flex
+    align-items: center
+    color: $color-orange
+    transition: all .5s ease
+    height: 100%
+    z-index: 3
+    pointer-events: initial
+    &:hover
+      background-color: $color-orange
+      color: $color-violet
+    &.active
+      background-color: $color-orange
+      color: $color-violet
+      transition: all .5s ease
+      &:hover
+        background-color: #f5d49d
+  &__bonus
+    display: flex
+    flex-direction: column
+  &__welcome
+    position: absolute
+    left: 30px
+    top: 230px
+    bottom: 0
+    padding: 72px 0px 0px 10px
+    width: 784px
+    display: flex
+    justify-content: center
+    // background: url('../img/cricket.svg') no-repeat 0 0/contain
+  &__title
+    position: relative
+    text-align: center
+    text-shadow: 0px 2px 10px rgba(7, 7, 19, 0.56)
+    font-size: 80px
+    font-weight: 900
+    line-height: 89.5%
+    text-transform: uppercase
+    color: $color-white
+
+  &__subtitle
+    margin-top: 12px
+    font-size: 42px
+    color: $color-orange
+    text-align: center
+    text-transform: uppercase
+    font-family: $font-roadRadio-regular
+
+  &__link
+    margin-top: 64px
+    height: 70px
+    padding: 0 35px
+    font-size: 36px
+    max-width: fit-content
+    margin-inline: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 144px
+    color: $color-black
+    font-family: $font-roadRadio-bold
+    font-weight: 700
+    text-transform: uppercase
+    position: relative
+    pointer-events: initial
+    &::before
+      content: "Get Bonus"
+      position: absolute
+      top: 0
+      right: 0
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 144px
+      background: linear-gradient(180deg, #DC9133 0.21%, #D79236 23.78%, #FCC054 51.21%, #FDF08B 100.21%)
+      transition: all 0.3s ease
+    &::after
+      content: "Get Bonus"
+      position: absolute
+      top: 0
+      right: 0
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 144px
+      background: linear-gradient(0deg, #DC9133 0.21%, #D79236 23.78%, #FCC054 51.21%, #FDF08B 100.21%)
+      opacity: 0
+      visibility: hidden
+      transition: all 0.3s ease
+    &:hover
+      &::before
+        opacity: 0
+        visibility: hidden
+      &::after
+        opacity: 1
+        visibility: visible
+
+  &__description
+    margin-top: 24px
+    font-size: 22px
+    color: $color-orange
+    text-align: center
+    text-transform: uppercase
+    font-family: $font-roadRadio-regular
+
+  &__partners
+    margin-block: auto 58px
+    margin-inline: auto
+    max-width: 513px
+
+  &__players
+    position: absolute
+    z-index: 10
+    bottom: -10px
+    right: -100px
+    max-height: calc(100% - 106px)
+    width: 1360px 
+
+  // &::before
+  //   content: ''
+  //   display: block
+  //   width: 288px
+  //   height: 404px
+  //   left: -80px
+  //   bottom: 22px
+  //   position: absolute
+  //   background: url('../img/light-left.svg') no-repeat 0 0/contain
+  //   animation: 5s infinite rotate-line2 ease-in-out
+  //   z-index: 2
+  // &::after
+  //   content: ''
+  //   display: block
+  //   width: 288px
+  //   height: 404px
+  //   right: -124px
+  //   top: 170px
+  //   position: absolute
+  //   background: url('../img/light-right.svg') no-repeat 0 0/contain
+  //   animation: 6s infinite rotate-line ease-in-out
+  &__footer
+    display: none
+  &__shadow
+    display: none
+.pulse-btn
+  animation: $btn-animation-speed infinite pulse-btn ease-in-out
+
+@keyframes pulse-btn
+  0%, 100%
+    transform: scale(1)
+  50%
+    transform: scale(1.07)
+
+@keyframes rotate-line
+  0%, 100%
+    transform: rotate(-10deg)
+  50%
+    transform: rotate(5deg)
+
+@keyframes rotate-line2
+  0%, 100%
+    transform: rotate(0deg)
+  50%
+    transform: rotate(-25deg)
+
+@keyframes rotate-line-tab-1
+  0%, 100%
+    transform: rotate(60deg)
+  50%
+    transform: rotate(40deg)
+  
+@keyframes rotate-line-tab-2
+  0%, 100%
+    transform: rotate(-15deg)
+  50%
+    transform: rotate(0deg)
+  
