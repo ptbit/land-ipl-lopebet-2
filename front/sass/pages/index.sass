@@ -181,38 +181,48 @@ body
     max-width: 513px
 
   &__players
+    width: 837px
+    height: 870px
     position: absolute
-    // z-index: 10
     bottom: 53px
     right: 73px
-    // max-height: calc(100% - 106px)
-    // width: 1360px 
     // border: 1px dashed red
     display: flex
     justify-content: space-between
     flex-wrap: wrap
-    gap: 16px
-    width: 837px
-    height: 870px
+    align-items: center
+
+
   &__player
-    // width: calc( 50% - 8px )
-    // height: calc( 50% - 8px )
-    width: 367px
-    height: 367px
-    // border: 1px dashed red
+    width: 45%
+    height: 43%
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
     position: relative
-    // padding: 10px
     &--1
-      background: url('../img/player-1-desk.png') no-repeat 0 50%/contain
+      background-image: url('../img/player-1-desk.png')
       animation: 4s infinite player-rotate-1 linear
+      &::before
+        content: ''
+        position: absolute
+        top: -60px
+        left: -160px
+        width: 230px
+        height: 239px
+        background-image: url('../img/lines-1.svg')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        animation: 8s infinite rotate-line linear
     &--2
-      background: url('../img/player-2-desk.png') no-repeat 0 50%/contain
+      background-image: url('../img/player-2-desk.png')
       animation: 7s infinite player-rotate-2 linear
     &--3
-      background: url('../img/player-3-desk.png') no-repeat 0 50%/contain
+      background-image: url('../img/player-3-desk.png')
       animation: 5s infinite player-rotate-3 linear
     &--4
-      background: url('../img/player-4-desk.png') no-repeat 0 50%/contain
+      background-image: url('../img/player-4-desk.png')
       animation: 5s infinite player-rotate-4 linear
 
 
@@ -244,11 +254,11 @@ body
   50%
     transform: scale(1.07)
 
-// @keyframes rotate-line
-//   0%, 100%
-//     transform: rotate(-10deg)
-//   50%
-//     transform: rotate(5deg)
+@keyframes rotate-line
+  0%, 100%
+    transform: rotate(5deg)
+  50%
+    transform: rotate(-10deg)
 
 // @keyframes rotate-line2
 //   0%, 100%
@@ -268,6 +278,9 @@ body
 //   50%
 //     transform: rotate(0deg)
   
+
+
+
 @keyframes player-rotate-1
   0%, 100%
     transform: rotate(-5deg)
