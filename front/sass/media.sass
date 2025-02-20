@@ -686,7 +686,7 @@
       transform: scale(0.4)
       // left: 120px
       height: 200%
-      width: 740px
+      // width: 740px
     &__players
       // width: 530px
       // right: 0
@@ -735,113 +735,117 @@
     &__players
       width: 270px
       height: 270px
-@media screen and (max-width: 760px) and (max-height: 393px)
+@media screen and (max-width: 760px) and (max-height: 370px)
   .land
     &__players
-      right: -30px
-@media screen and (max-width: 760px) and (max-height: 305px) // for samsung s22/23 ultra
+      width: 250px
+      height: 250px
+@media screen and (max-width: 760px) and (max-height: 344px)
   .land
-    &__welcome
-      left: 120px
     &__players
-      right: 30px
+      right: 50px
+      width: 220px
+      height: 220px
+// @media screen and (max-width: 760px) and (max-height: 305px) // for samsung s22/23 ultra
+  // .land
+  //   &__welcome
+  //   &__players
+
 
 @media screen and (max-width: 750px) and (max-height: 352px) //for iPhone 16 Pro + safari
   .land
     &__welcome
-      min-height: 160%
+      min-height: 150%
 @media screen and (max-width: 750px) and (max-height: 334px) //for iPhone 15 Pro
   .land
-    &__welcome
-      // min-height: 180% // iPhone 14 
-      min-height: 200% // iPhone 15 
     &__players
-      width: 560px
+      width: 250px
+      height: 250px
 @media screen and (max-width: 746px) and (max-height: 428px)
   .land
     &__welcome
-      left: 50px
-    &__players
-      width: 670px
-      right: -50px
+      left: 20px
+      width: auto
 @media screen and (max-width: 745px) and (max-height: 353px) // pixel 4
   .land
     &__welcome
       left: 70px
-    &__players
-      width: 580px
-      right: -40px
 @media screen and (max-width: 740px) and (max-height: 360px) // samsung s8+
   .land
     &__welcome
-      left: 70px
+      left: 10px
     &__players
-      width: 600px
 @media screen and (max-width: 736px) and (max-height: 414px) // iphone 6/7/8
   .land
     &__welcome
       transform: scale(0.5)
     &__players
-      width: 700px
-      right: -80px
+      bottom: 20px
 @media screen and (max-width: 734px) and (max-height: 343px) //for iPhone 14 Pro v16.3 + safari
   .land
     &__welcome
       left: 70px
-    &__players
-      width: 560px
-      right: -20px
+    // &__players
+      // width: 560px
+      // right: -20px
 @media screen and (max-width: 734px) and (max-height: 337px) // fold
   .land
     &__players
-      width: 570px
-      right: -30px
+      // width: 570px
+      // right: -30px
 @media screen and (max-width: 731px) and (max-height: 411px) // pixel 2
   .land
     &__welcome
       transform: scale(0.5)
       left: 40px
-    &__players
-      width: 680px
-      right: -80px
+    // &__players
+    //   width: 680px
+    //   right: -80px
 
 @media screen and (max-width: 726px) and (max-height: 334px) // for iPhone 16
   .land
     &__welcome
       left: 60px
       min-height: 165% // ip 14 pro
-    &__players
-      width: 570px
-      right: -10px
+    // &__players
+    //   width: 570px
+      // right: -10px
 @media screen and (max-width: 724px) and (max-height: 334px) // for iPhone 16 Pro
   .land
     &__welcome
       left: 60px
       transform: scale(0.5)
       height: 160%
-    &__players
-      width: 570px
-      right: -10px
 @media screen and (max-width: 720px) and (max-height: 540px)
   .land
+    &__welcome
+      left: 10px
+      width: auto
+      min-height: 150%
     &__players
-      width: 680px
-      right: -50px
+      width: 320px
+      height: 320px
+      bottom: 100px
 @media screen and (max-width: 717px) and (max-height: 384px)
   .land
+    &__welcome
+      left: 30px
     &__players
-      width: 650px
-      right: -50px
+      bottom: 20px
+      width: 270px
+      height: 270px
 @media screen and (max-width: 712px) and (max-height: 325px)// for iPhone 12 mini + safari
   .land
     &__welcome
       transform: scale(0.5)
-      height: 165%
+      min-height: 170%
       width: fit-content
       left: 80px
+    &__partners
+      margin-bottom: 20px
     &__players
-      width: 550px
-      right: -20px 
+      width: 220px
+      height: 220px
 @media screen and (max-width: 712px) and (max-height: 319px)// for iPhone 12 mini 
   .land
     &__welcome
@@ -849,99 +853,69 @@
       height: 165%
       width: fit-content
       left: 80px
-    &__players
-      width: 550px
-      right: -20px
-@media screen and (max-width: 708px) and (max-height: 655px)
-  .land
-    &__players
-      right: -110px
-      width: 700px
-    &__partners
-      padding-right: 40px
-@media screen and (max-width: 708px) and (max-height: 649px) //fold
-  .land
-    &__players
-      width: 700px
-@media screen and (max-width: 705px) and (max-height: 280px) //Samsung Galaxy S23 
+    // &__players
+    //   width: 550px
+    //   right: -20px
+// @media screen and (max-width: 708px) and (max-height: 655px)
+  // .land
+    // &__players
+    //   right: -110px
+    //   width: 700px
+    // &__partners
+    //   padding-right: 40px
+// @media screen and (max-width: 708px) and (max-height: 649px) //fold
+//   .land
+//     &__players
+//       width: 700px
+@media screen and (max-width: 705px) and (max-height: 285px) //Samsung Galaxy S23 
   .land
     &__welcome
       min-height: 200%
       transform: scale(0.4)
       left: 90px
     &__players
-      width: 460px
-      right: 40px
+      width: 190px
+      height: 190px
+      right: 100px
 @media screen and (max-width: 667px) and (max-height: 375px) // iphone se + 6/7/8
   .land
-    &::before
-      bottom: 10px
-      left: -60px
-    &__title
-      &::after
-        display: none
     &__welcome
       left: 20px
       height: 160%
-    &__players
-      width: 600px
-      right: -50px
 
 @media screen and (max-width: 666px) and (max-height: 393px)
   .land
     &__players
-      width: 570px
-      right: -45px
-
+      bottom: 20px
+      width: 300px
+      height: 300px
 @media screen and (max-width: 658px) and (max-height: 360px)
   .land
-    &::after
-      top: 70px
-    &__title
-      &::after
-        width: 200px
-        height: 175px
-        right: 50px
-        top: -135px
     &__welcome
-      width: auto
-      transform: scale(0.5)
-      height: 160%
-      left: 60px
-      padding-top: 20px
-    &__players
-      width: 520px
-@media screen and (max-width: 640px) and (max-height: 360px) //samsung S5
-  .land
-    &::before
-      width: 80px
-      bottom: 60px
-      left: -30px
-      height: 130px
-    &__welcome
-      left: 30px
-      height: 145%
       transform: scale(0.55)
     &__players
-      width: 510px
-      right: -35px  //-70
+      width: 270px
+      height: 270px
+@media screen and (max-width: 640px) and (max-height: 360px) //samsung S5
+  .land
+    &__welcome
+      left: 10px
 @media screen and (max-width: 568px) and (max-height: 320px) // ip se/5
   .land
     &__welcome
-      left: 30px
       height: 155%
-      transform: scale(0.5)
+      transform: scale(0.47)
     &__players
-      width: 460px
-      right: -70px
+      width: 220px
+      height: 220px
 @media screen and (max-width: 553px) and (max-height: 375px) // iphone se + 6/7/8
   .land
     &__welcome
-      height: 200%
+      height: 180%
       transform: scale(0.4)
     &__players
-      width: 520px
-
+      width: 250px
+      height: 250px
 // /////////////////////////////////////////////
 // /////////////////////////////////////////////
 // /////////////////////////////////////////////
