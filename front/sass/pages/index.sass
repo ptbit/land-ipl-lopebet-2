@@ -181,7 +181,7 @@ body
     max-width: 513px
 
   &__players
-    width: 837px
+    width: 820px
     height: 870px
     position: absolute
     bottom: 53px
@@ -200,9 +200,13 @@ body
     background-repeat: no-repeat
     background-position: center
     position: relative
+    z-index: 1
     &--1
-      background-image: url('../img/player-1-desk.png')
+      position: relative
       animation: 4s infinite player-rotate-1 linear
+      img
+        position: relative
+        z-index: 2
       &::before
         content: ''
         position: absolute
@@ -215,16 +219,30 @@ body
         background-repeat: no-repeat
         background-position: center
         animation: 8s infinite rotate-line linear
+        z-index: 2
     &--2
-      background-image: url('../img/player-2-desk.png')
       animation: 7s infinite player-rotate-2 linear
     &--3
-      background-image: url('../img/player-3-desk.png')
       animation: 5s infinite player-rotate-3 linear
     &--4
-      background-image: url('../img/player-4-desk.png')
       animation: 5s infinite player-rotate-4 linear
-
+      position: relative
+      img
+        position: relative
+        z-index: 2
+      &::before
+        content: ''
+        position: absolute
+        bottom: -60px
+        right: -160px
+        width: 230px
+        height: 239px
+        background-image: url('../img/lines-2.svg')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        animation: 8s infinite rotate-line2 linear
+        z-index: 23
 
   &__footer
     display: none
@@ -258,13 +276,13 @@ body
   0%, 100%
     transform: rotate(5deg)
   50%
-    transform: rotate(-10deg)
+    transform: rotate(-15deg)
 
-// @keyframes rotate-line2
-//   0%, 100%
-//     transform: rotate(0deg)
-//   50%
-//     transform: rotate(-25deg)
+@keyframes rotate-line2
+  0%, 100%
+    transform: rotate(0deg)
+  50%
+    transform: rotate(-25deg)
 
 // @keyframes rotate-line-tab-1
 //   0%, 100%
