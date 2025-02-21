@@ -198,6 +198,7 @@ body
     height: 45%
     position: relative
     z-index: 1
+    border-radius: 10px
     box-shadow: 0px 325.202px 90.09px 0px rgba(0, 0, 0, 0.00), 0px 208.744px 83.498px 0px rgba(0, 0, 0, 0.03), 0px 116.457px 70.314px 0px rgba(0, 0, 0, 0.10), 0px 52.735px 52.735px 0px rgba(0, 0, 0, 0.17), 0px 13.184px 28.565px 0px rgba(0, 0, 0, 0.20)
     &--1
       position: relative
@@ -223,6 +224,7 @@ body
       animation: 5s infinite player-rotate-4 linear
       position: relative
       img
+        position: relative
         z-index: 2
       &::before
         content: ''
@@ -236,8 +238,8 @@ body
         z-index: 1
   &__footer
     display: none
-  &__shadow
-    display: none
+  // &__shadow
+  //   display: none
 
 .pulse-btn
   animation: $btn-animation-speed infinite pulse-btn ease-in-out
@@ -260,11 +262,11 @@ body
   50%
     transform: rotate(10deg)
 
-// @keyframes rotate-line-tab-1
-//   0%, 100%
-//     transform: rotate(60deg)
-//   50%
-//     transform: rotate(40deg)
+@keyframes rotate-line-tab-1
+  0%, 100%
+    transform: rotate(5deg)
+  50%
+    transform: rotate(10deg)
   
 // @keyframes rotate-line-tab-2
 //   0%, 100%
