@@ -186,25 +186,19 @@ body
   &__players
     width: 820px
     height: 820px
-    // max-height: 80%
     position: absolute
     bottom: 53px
     right: 73px
-    // border: 1px dashed red
     display: flex
     justify-content: space-between
     flex-wrap: wrap
     align-items: center
-
-
   &__player
     width: 45%
-    height: 43%
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center
+    height: 45%
     position: relative
     z-index: 1
+    box-shadow: 0px 325.202px 90.09px 0px rgba(0, 0, 0, 0.00), 0px 208.744px 83.498px 0px rgba(0, 0, 0, 0.03), 0px 116.457px 70.314px 0px rgba(0, 0, 0, 0.10), 0px 52.735px 52.735px 0px rgba(0, 0, 0, 0.17), 0px 13.184px 28.565px 0px rgba(0, 0, 0, 0.20)
     &--1
       position: relative
       animation: 4s infinite player-rotate-1 linear
@@ -218,10 +212,7 @@ body
         left: -160px
         width: 230px
         height: 239px
-        background-image: url('../img/lines-1.svg')
-        background-size: contain
-        background-repeat: no-repeat
-        background-position: center
+        background: url('../img/lines-1.svg') no-repeat 50% 50%/contain
         animation: 8s infinite rotate-line linear
         z-index: 2
     &--2
@@ -232,7 +223,6 @@ body
       animation: 5s infinite player-rotate-4 linear
       position: relative
       img
-        // position: relative
         z-index: 2
       &::before
         content: ''
@@ -241,13 +231,9 @@ body
         right: -160px
         width: 230px
         height: 239px
-        background-image: url('../img/lines-2.svg')
-        background-size: contain
-        background-repeat: no-repeat
-        background-position: center
+        background: url('../img/lines-2.svg') no-repeat 50% 50%/contain
         animation: 5s infinite rotate-line2 linear
         z-index: 1
-
   &__footer
     display: none
   &__shadow
