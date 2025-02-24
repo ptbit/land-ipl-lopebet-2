@@ -625,14 +625,7 @@
       min-height: 145% 
     &__players
       bottom: 50px
-@media screen and (max-width: 709px) and (max-height: 656px) // Z fold 5 (EMULATOR) + Z fold 6
-  .land
-    &__welcome
-      left: -60px
-    &__players
-      right: 20px
-      width: 340px
-      height: 340px
+
 @media screen and (max-width: 823px) and (max-height: 540px)
   .land
     &__welcome
@@ -814,6 +807,14 @@
       height: 165%
       width: fit-content
       left: 80px
+@media screen and (max-width: 709px) and (max-height: 656px) // Z fold 5 (EMULATOR) + Z fold 6
+  .land
+    &__welcome
+      left: -60px
+    &__players
+      right: 20px
+      width: 340px
+      height: 340px
 @media screen and (max-width: 705px) and (max-height: 285px) //Samsung Galaxy S23 
   .land
     &__welcome
@@ -1064,22 +1065,36 @@
     &__welcome
       top: 70px
       transform: scale(0.9)
-    // &__players
-    //   bottom: -60px
+
+@media screen and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait)
+  .land
+    &__players
+      width: 450px
+      height: 450px
+      bottom: 260px
+    &__player
+      &--1
+        &::before
+          top: -40px
+          left: -100px
+          width: 160px
+          height: 179px
+          border: 1px dashed red
+      &--4
+        &::before
+          bottom: -45px
+          right: -105px
+          width: 160px
+          height: 179px
+          border: 1px dashed red
+
 @media screen and (max-width: 768px) and (max-height: 954px) and (orientation: portrait)
   .land
     &__welcome
       top: 60px
       transform: scale(0.8)
-    // &__footer
-    //   transform: translate(-50%) scale(1)
+// @media screen and (max-width: 712px) and (max-height: 970px) and (orientation: portrait)
 
-    // &__players
-    //   bottom: -80px
-@media screen and (max-width: 712px) and (max-height: 970px) and (orientation: portrait)
-  // .land
-    // &__welcome
-    //   top: 110px
 @media screen and (max-width: 690px) and (max-height: 829px) and (orientation: portrait) // Z FOLD 5 folded
   .land
     &__welcome
