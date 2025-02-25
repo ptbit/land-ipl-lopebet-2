@@ -7,8 +7,6 @@ $color-orange: #FCC054
 $color-violet: #4E0154
 $color-black: #0C1222
 $color-white: #F0F0F0
-// $color-name: #522D1D
-// $oval-shadow-color: #07080D
 
 $btn-animation-speed: 1.2s
 
@@ -65,7 +63,7 @@ body
     font-size: 28px
   &__button
     border-radius: 4px
-    border: 2px solid #FCC054
+    border: 2px solid $color-orange
     text-align: center
     font-size: invert
     font-weight: 700
@@ -150,7 +148,7 @@ body
       justify-content: center
       align-items: center
       border-radius: 144px
-      background: linear-gradient(180deg, #DC9133 0.21%, #D79236 23.78%, #FCC054 51.21%, #FDF08B 100.21%)
+      background: linear-gradient(180deg, #DC9133 0.21%, #D79236 23.78%, $color-orange 51.21%, #FDF08B 100.21%)
       transition: all 0.3s ease
     &::after
       content: "Get Bonus"
@@ -163,7 +161,7 @@ body
       justify-content: center
       align-items: center
       border-radius: 144px
-      background: linear-gradient(0deg, #DC9133 0.21%, #D79236 23.78%, #FCC054 51.21%, #FDF08B 100.21%)
+      background: linear-gradient(0deg, #DC9133 0.21%, #D79236 23.78%, $color-orange 51.21%, #FDF08B 100.21%)
       opacity: 0
       visibility: hidden
       transition: all 0.3s ease
@@ -243,8 +241,6 @@ body
         z-index: 1
   &__footer
     display: none
-  // &__shadow
-  //   display: none
 
 .pulse-btn
   animation: $btn-animation-speed infinite pulse-btn ease-in-out

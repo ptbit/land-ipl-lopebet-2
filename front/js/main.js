@@ -113,7 +113,6 @@ const needAnimateElement = document.querySelector('.land__cricket');
 
 if (getComputedStyle(needAnimateElement).display !== 'none') {
   let position = 0;
-  console.log('Animation');
   setInterval(() => {
     position -= 1;
     needAnimateElement.style.backgroundPosition = `0px ${position}px`;
