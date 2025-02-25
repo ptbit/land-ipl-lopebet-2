@@ -7,12 +7,11 @@ $color-orange: #FCC054
 $color-violet: #4E0154
 $color-black: #0C1222
 $color-white: #F0F0F0
-$color-name: #522D1D
-$oval-shadow-color: #07080D
+// $color-name: #522D1D
+// $oval-shadow-color: #07080D
 
-$dots-opacity: 0.5
 $btn-animation-speed: 1.2s
-$player-animation-speed: 4s
+
 body
   background-color: #0a2c2b
   overscroll-behavior: none
@@ -27,6 +26,14 @@ body
 .land
   pointer-events: none
   background: url('../img/bg-1920.jpg') no-repeat 50% 50%/cover
+  @media screen and (min-width: 600px) and (orientation: landscape) and (min-height: 501px)
+    background: url('../img/bg-1920.jpg') no-repeat 50% 50%/cover 
+  @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
+    background: url('../img/bg-768.jpg') no-repeat 50% 50%/cover
+  @media screen and (max-width: 600px) and (orientation: portrait)
+    background: url("../img/bg-375.jpg") no-repeat 50% 50%/cover
+  @media (max-width: 950px) and (max-height: 700px) and (orientation: landscape)
+    background: url("../img/bg-1920-landscape.jpg") no-repeat 50% 50%/cover
   width: 100%
   height: 100%
   -webkit-tap-highlight-color: transparent
